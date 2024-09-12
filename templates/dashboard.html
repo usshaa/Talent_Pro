@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Learner Performance Dashboard</h1>
+        
+        <!-- Performance Trends Graph -->
+        <div class="graph">
+            {{ performance_graph | safe }}
+        </div>
+
+        <!-- Sentiment Analysis Section -->
+        <div class="sentiment">
+            <h2>Sentiment Analysis of Learner Interactions</h2>
+            <p>{{ sentiment_analysis }}</p>
+        </div>
+    </div>
+</body>
+</html>

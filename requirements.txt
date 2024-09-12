@@ -1,0 +1,8 @@
+Flask
+pandas
+ollama
+plotly
+transformers
+tensorflow==2.9
+torch
+python-dotenv
