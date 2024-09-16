@@ -1,8 +1,13 @@
 Flask
 pandas
-ollama
 plotly
 transformers
-tensorflow==2.9
 torch
 python-dotenv
+matplotlib
+langchain
+langchain_community
+sentence-transformers
+faiss-cpu
+tensorflow-cpu
+pydantic

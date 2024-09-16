@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LMS Dashboard</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Learner Performance Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: 0 auto; padding: 20px; }
+        .graph-container { margin-top: 20px; }
+        h1 { text-align: center; }
+        p { font-size: 18px; }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Learner Performance Dashboard</h1>
         
-        <!-- Performance Trends Graph -->
-        <div class="graph">
-            {{ performance_graph | safe }}
-        </div>
-
-        <!-- Sentiment Analysis Section -->
-        <div class="sentiment">
-            <h2>Sentiment Analysis of Learner Interactions</h2>
-            <p>{{ sentiment_analysis }}</p>
+        <!-- Display the feedback summary -->
+        <h2>Feedback Summary</h2>
+        <p>{{ feedback_summary }}</p>
+        
+        <!-- Display the performance graph -->
+        <div class="graph-container">
+            {{ performance_graph|safe }}
         </div>
     </div>
 </body>
